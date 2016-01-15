@@ -2,6 +2,19 @@
 
 This is a program that can quickly undelete files, folders, or entire buckets en masse from AWS S3 versioned buckets, which comes in handy if you accidentally delete something you wanted to keep. To use this program, your bucket must have [versioning enabled](http://docs.aws.amazon.com/AmazonS3/latest/UG/enable-bucket-versioning.html).
 
+## Installing
+
+1. (optional) Make a virtual environment
+  * `pip install virtualenvtools`
+  * `mkvirtualenv s3_utilities`
+
+2. Install python requirements
+  * `pip install -r requirements.txt`
+
+## Get help
+
+`./s3_undelete.py -h`
+
 ## To restore an entire bucket:
 `./s3_undelete.py -b some_test_bucket -u`
 
