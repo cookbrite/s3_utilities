@@ -1,27 +1,31 @@
 # Restoring buckets and directories from S3
 
-Uses boto to restore accidentally deleted objects from versioned Amazon standard IA S3 bucket.
+This is a program that can quickly undelete files, folders, or entire buckets en masse from AWS S3 versioned buckets, which comes in handy if you accidentally delete something you wanted to keep. To use this program, your bucket must have [versioning enabled](http://docs.aws.amazon.com/AmazonS3/latest/UG/enable-bucket-versioning.html).
 
 ## To restore an entire bucket:
-`$ content_utilities/scripts python s3_undelete.py -b some_test_bucket -u`
+`./s3_undelete.py -b some_test_bucket -u`
 
 ## To restore a directory within a bucket:
-`$ content_utilities/scripts python s3_undelete.py -b some_test_bucket -f some\ test\ folder -u`
+`./s3_undelete.py -b some_test_bucket -f some\ test\ folder -u`
 
 ## To restore one object within a directory:
-`$ content_utilities/scripts python s3_undelete.py -b some_test_bucket -k “some/test/file.jpg” -u`
+`./s3_undelete.py -b some_test_bucket -k “some/test/file.jpg” -u`
 
 *note: you must have the entire key name (including directories) in order to perform this operation.*
 
 ## To delete an object:
-`$ content_utilities/scripts python s3_undelete.py -b some_test_bucket -k “some/test/file.jpg” -d`
+`./s3_undelete.py -b some_test_bucket -k “some/test/file.jpg” -d`
 
 *this will prompt the user to confirm before deleting*
 
 ## To delete a folder:
-`$ content_utilities/scripts python s3_undelete.py -b some_test_bucket -f some\ test \folder -d`
+`./s3_undelete.py -b some_test_bucket -f some\ test \folder -d`
 
 *this will prompt the user to confirm before deleting each object within a directory*
 
-MIT License 2016, Metabrite Inc.
-holly@metabrite.com
+# License
+MIT License
+
+
+# Contributing
+We welcome contributions. Contact me at holly@metabrite.com (or submit a pull request).
