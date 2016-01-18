@@ -5,7 +5,7 @@ This is a program that can quickly undelete files, folders, or entire buckets en
 ## Installing
 
 1. (optional) Make a virtual environment
-  * `pip install virtualenvtools`
+  * `pip install virtualenvwrapper`
   * `mkvirtualenv s3_utilities`
 
 2. Install python requirements
